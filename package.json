@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "node node_modules/nodemon/bin/nodemon.js --exec node_modules/babel-cli/bin/babel-node.js -- test/resources/listen.js",
+    "serve:basic": "node node_modules/nodemon/bin/nodemon.js --exec node_modules/babel-cli/bin/babel-node.js examples/basic",
     "test": "node node_modules/mocha/bin/mocha --recursive --compilers js:babel-register -r test/env.js"
   },
   "keywords": [],
@@ -17,11 +17,13 @@
     "debug": "2.2.0",
     "json-schema-ref-parser": "3.1.2",
     "jsonschema": "1.1.0",
+    "lodash.clonedeep": "4.3.2",
     "lodash.defaults": "4.0.1",
     "lodash.flatten": "4.2.0",
     "lodash.get": "4.3.0",
     "lodash.groupby": "4.4.0",
     "lodash.map": "4.4.0",
+    "lodash.merge": "4.4.0",
     "lodash.reduce": "4.4.0"
   },
   "devDependencies": {

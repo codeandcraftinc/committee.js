@@ -4,4 +4,4 @@ import chaiAsPromised from 'chai-as-promised'
 
 chai.use(chaiAsPromised)
 
-blocked((ms) => console.log(`--> blocked for ${ms} ms`), { threshold: 1 })
+blocked((ms) => console.log(`--> blocked for ${ms} ms`), { threshold: 10 })
