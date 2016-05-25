@@ -58,6 +58,22 @@
           "type": [
             "string"
           ]
+        },
+        "somestring": {
+          "description": "unique somestring of example",
+          "example": "somestring",
+          "readOnly": true,
+          "type": [
+            "string"
+          ]
+        },
+        "someotherstring": {
+          "description": "unique someotherstring of example",
+          "example": "someotherstring",
+          "readOnly": true,
+          "type": [
+            "string"
+          ]
         }
       },
       "links": [
@@ -95,10 +111,18 @@
             "properties": {
               "name": {
                 "$ref": "#/definitions/example/definitions/name"
+              },
+              "somestring": {
+                "$ref": "#/definitions/example/definitions/somestring"
+              },
+              "someotherstring": {
+                "$ref": "#/definitions/example/definitions/someotherstring"
               }
             },
             "required": [
-              "name"
+              "name",
+              "somestring",
+              "someotherstring"
             ],
             "type": [
               "object"
