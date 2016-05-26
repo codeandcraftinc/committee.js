@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "npm run-script serve:basic",
     "serve:basic": "node node_modules/nodemon/bin/nodemon.js --exec node_modules/babel-cli/bin/babel-node.js examples/basic",
+    "tdd": "npm test -- --watch",
     "test": "node node_modules/mocha/bin/mocha --recursive --compilers js:babel-register -r test/env.js"
   },
   "keywords": [],
