@@ -1,9 +1,11 @@
 {
   "name": "committee.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "build": "node node_modules/babel-cli/bin/babel.js lib -d dist",
+    "release": "npm run build && node node_modules/release-it/bin/release.js",
     "serve": "npm run-script serve:basic",
     "serve:basic": "node node_modules/nodemon/bin/nodemon.js --exec node_modules/babel-cli/bin/babel-node.js examples/basic",
     "tdd": "npm test -- --watch",
@@ -42,6 +44,7 @@
     "express": "4.13.4",
     "mocha": "2.4.5",
     "nodemon": "1.9.2",
+    "release-it": "2.4.0",
     "supertest": "1.2.0",
     "supertest-as-promised": "3.1.0"
   }
