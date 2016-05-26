@@ -61,16 +61,6 @@
           "title": "Delete"
         },
         {
-          "description": "Info for existing app.",
-          "href": "/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fname)}",
-          "method": "GET",
-          "rel": "self",
-          "targetSchema": {
-            "$ref": "#/definitions/app"
-          },
-          "title": "Info"
-        },
-        {
           "description": "List existing apps.",
           "href": "/apps",
           "method": "GET",
@@ -110,6 +100,16 @@
             "required": ["query"]
           },
           "title": "Search"
+        },
+        {
+          "description": "Info for existing app.",
+          "href": "/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fname)}",
+          "method": "GET",
+          "rel": "self",
+          "targetSchema": {
+            "$ref": "#/definitions/app"
+          },
+          "title": "Info"
         },
         {
           "description": "Update an existing app.",
