@@ -15,8 +15,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async.detect": "0.5.2",
-    "async.reduce": "0.5.2",
     "bluebird": "3.4.0",
     "debug": "2.2.0",
     "json-schema-ref-parser": "3.1.2",
