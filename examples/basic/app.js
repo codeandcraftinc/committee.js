@@ -8,6 +8,6 @@ const app = express()
 app.use(json())
 app.use(urlencoded({ extended: true }))
 app.use(validateRequest({ schema: schema }))
-app.all('*', (req, res) => res.status(200).send())
+app.all('*', (req, res) => res.status(200).json('OK'))
 
 export default app
