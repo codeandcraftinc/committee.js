@@ -55,4 +55,38 @@ describe('RequestValidator', () => {
     return expect(promise).to.be.rejectedWith(ValidationError)
   })
 
+  it('allows an invalid Content-Type with an empty body', () => {
+    const promise = new RequestValidator({
+      schema: schema
+    }).initialize().then((validator) => {
+      return validator.validate({
+        body: {},
+        get: () => 'text/html',
+        method: 'POST',
+        path: '/apps',
+        query: {}
+      })
+    })
+
+    return expect(promise).to.be.fulfilled
+  })
+
+  it('detects a parameter of the wrong pattern', () => {
+    const promise = new RequestValidator({
+      schema: schema
+    }).initialize().then((validator) => {
+      return validator.validate({
+        body: {},
+        get: () => 'text/html',
+        method: 'GET',
+        path: '/apps/search',
+        query: {
+          query: 1
+        }
+      })
+    })
+
+    return expect(promise).to.be.rejectedWith(ValidationError)
+  })
+
 })
