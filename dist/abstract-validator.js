@@ -82,7 +82,7 @@ class AbstractValidator {
         memo[link.method] = [];
       }
 
-      memo[link.method].push([new RegExp('^' + link.href.replace(/\{(.*?)\}/, '[^/]+') + '$'), link]);
+      memo[link.method].push([new RegExp('^' + link.href.replace(/\{(.*?)\}/g, '[^/]+') + '$'), link]);
 
       return memo;
     }, {});
